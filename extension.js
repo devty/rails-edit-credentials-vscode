@@ -27,7 +27,7 @@ function activate(context) {
 		vscode.window.showInformationMessage(`Launching editor for ${env} credentials ...`)
 
 		let terminal = vscode.window.createTerminal('credentials-terminal')
-		terminal.sendText(`env EDITOR="code --new-window --wait" rails credentials:edit --environment ${env}`)
+		terminal.sendText(`env EDITOR="code --new-window --wait" bin/rails credentials:edit --environment ${env}`)
 	})
 
 	context.subscriptions.push(disposable)
